@@ -32,7 +32,7 @@ let shouldQuit = app.makeSingleInstance(function (commandLine, workingDirectory)
 if (shouldQuit) {
   console.log('stretchly is already running.')
   app.quit()
-  return
+  return // eslint-disable-line
 }
 
 app.on('ready', startProcessWin)
